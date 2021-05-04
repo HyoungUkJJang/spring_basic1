@@ -1,5 +1,5 @@
 package hello.core.member;
-
+// 클라이언트 역할
 public interface MemberService {
 
     void join(Member member);

@@ -1,8 +1,14 @@
 package hello.core.member;
 
 public class MemberServiceImpl implements MemberService{
+    // 직접 생성해주고있다. 고쳐주자
+    //private final MemberRepository memberRepository = new MemoryMemberRepository();
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
