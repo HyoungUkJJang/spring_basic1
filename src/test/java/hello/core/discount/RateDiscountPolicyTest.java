@@ -35,6 +35,6 @@ class RateDiscountPolicyTest {
         int discount = rateDiscountPolicy.discount(member, 10000);
 
         //then
-        Assertions.assertThat(discount).isEqualTo(1000); // 임포트 스테틱 알아보기
+        Assertions.assertThat(discount).isEqualTo(0); // 임포트 스테틱 알아보기
     }
 }
