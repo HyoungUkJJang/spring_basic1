@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 
 // 앱전반에 대한 모든 생성을 여기서 담당할 수 있도록 해준다.
 // 스프링 기반으로 변경할땐 어노테이션이 붙는다.
-@Configuration
+@Configuration // 싱글톤을 위해 존재하는것 ..! 붙이지않으면 싱글톤 보장이 안됨 순수 자바코드로 실행이된다.
 public class AppConfig {
 
 /*    public MemberRepository memberRepository()
@@ -25,15 +25,18 @@ public class AppConfig {
     @Bean
     public MemberService memberService()
     {
+        //System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
     @Bean
     public MemberRepository memberRepository() {
+        //System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
     @Bean
     public OrderService orderService()
     {
+        //System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(discountPolicy(), memberRepository());
     }
     @Bean

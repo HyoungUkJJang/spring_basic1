@@ -7,7 +7,10 @@ import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
@@ -24,7 +27,7 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy; // 하지만 널포인트에러가 터진다
 
     // 오더서비스 또한 메모리 멤버 리포지토리를 쓴다. 디스카운트폴리시까지 함께
-
+    @Autowired
     public OrderServiceImpl(DiscountPolicy discountPolicy, MemberRepository memberRepository) {
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepository;
@@ -36,5 +39,10 @@ public class OrderServiceImpl implements OrderService{
         int discountPrice = discountPolicy.discount(member, itemPrice);
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
+    }
+
+    // 테스트용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
     }
 }
