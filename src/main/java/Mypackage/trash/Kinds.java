@@ -1,4 +1,4 @@
-package Mypackage.user;
+package Mypackage.trash;
 
 public enum Kinds {
 

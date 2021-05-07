@@ -1,12 +1,13 @@
 package Mypackage.user;
 
 
+import Mypackage.trash.Card;
+
 public class User {
 
     private Long id;
     private String name;
     private int age;
-    private Card card;
 
     @Override
     public String toString() {
@@ -14,8 +15,13 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", card=" + card +
                 '}';
+    }
+
+    public User(Long id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
     }
 
     public Long getId() {
@@ -40,20 +46,5 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Card getCard() {
-        return card;
-    }
-
-    public void setCard(Card card) {
-        this.card = card;
-    }
-
-    public User(Long id, String name, int age, Card card) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.card = card;
     }
 }

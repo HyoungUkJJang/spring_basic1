@@ -1,6 +1,6 @@
 package Mypackage.shoes;
 
-import Mypackage.user.Kinds;
+import Mypackage.trash.Kinds;
 import Mypackage.user.User;
 
 public interface ShoesSpeedPolicy {

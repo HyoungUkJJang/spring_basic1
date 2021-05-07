@@ -2,7 +2,11 @@ package Mypackage.user;
 
 public class UserServiceImpl implements UserService{
 
-    private final UserRepository userRepository = new LocalUserRepository();
+    private UserRepository userRepository;
+
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public void join(User user) {

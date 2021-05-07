@@ -5,7 +5,7 @@ import hello2.core.discount.RateDiscountPolicy;
 import hello2.core.member.MemberRepository;
 import hello2.core.member.MemberService;
 import hello2.core.member.MemberServiceImpl;
-import hello2.core.member.MemoryMemberRepository;
+import hello2.core.member.LocalMemberSave;
 import hello2.core.order.OrderService;
 import hello2.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +30,7 @@ public class AppConfig {
     @Bean
     public MemberRepository memberRepository() {
         //System.out.println("call AppConfig.memberRepository");
-        return new MemoryMemberRepository();
+        return new LocalMemberSave();
     }
     @Bean
     public OrderService orderService()
