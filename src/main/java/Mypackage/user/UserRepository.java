@@ -4,7 +4,8 @@ public interface UserRepository {
 
     void save(User user);
 
-    User find(String userId);
+    User find(Long userId);
+
 
 
 }

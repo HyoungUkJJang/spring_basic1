@@ -8,7 +8,7 @@ public class DbUserRepository implements UserRepository{
     }
 
     @Override
-    public User find(String userId) {
+    public User find(Long userId) {
         return null;
     }
 
