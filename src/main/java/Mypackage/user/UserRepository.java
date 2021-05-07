@@ -2,7 +2,7 @@ package Mypackage.user;
 
 public interface UserRepository {
 
-    void join(User user);
+    void save(User user);
 
     User find(String userId);
 
