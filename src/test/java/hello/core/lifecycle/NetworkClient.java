@@ -39,14 +39,14 @@ public class NetworkClient  {
     public void disconnect(){
         System.out.println("close "+url);
     }
-
+    //시작
     @PostConstruct
     public void init() {
         System.out.println("NetworkClient.init");
         connect();
         call("초기화 연결 메세지");
     }
-
+    //종료
     @PreDestroy
     public void close()  {
         System.out.println("NetworkClient.close");
