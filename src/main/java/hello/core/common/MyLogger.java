@@ -9,7 +9,7 @@ import javax.annotation.PreDestroy;
 import java.util.UUID;
 
 @Component
-@Scope(value = "request", proxyMode = ScopedProxyMode.DEFAULT.TARGET_CLASS) // 프록시모드
+//@Scope(value = "request", proxyMode = ScopedProxyMode.DEFAULT.TARGET_CLASS) // 프록시모드
 public class MyLogger {
 
     private String uuid;
