@@ -1,4 +1,4 @@
-package MyPractice.core.scenario1.order;
+package MyPractice.core.scenario2.order;
 
 import MyPractice.core.scenario1.discount.DiscountPolicy;
 import MyPractice.core.scenario1.discount.FixDiscountPolicy;
@@ -6,7 +6,7 @@ import MyPractice.core.scenario1.member.Member;
 import MyPractice.core.scenario1.member.MemberRepository;
 import MyPractice.core.scenario1.member.MemoryMemberRepository;
 
-public class OrderServiceImpl implements OrderService{
+public class OrderServiceImpl implements OrderService {
 
     private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     private final MemberRepository memberRepository = new MemoryMemberRepository();

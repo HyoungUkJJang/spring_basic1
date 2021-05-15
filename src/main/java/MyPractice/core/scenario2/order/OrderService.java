@@ -1,6 +1,4 @@
-package MyPractice.core.scenario1.order;
-
-import MyPractice.core.scenario1.member.Member;
+package MyPractice.core.scenario2.order;
 
 public interface OrderService {
 

@@ -1,11 +1,11 @@
-package MyPractice.core.scenario1.member;
+package MyPractice.core.scenario2.member;
 
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class MemoryMemberRepository implements MemberRepository{
-    // private static 안붙여서 오류낫엇음 잘붙이자..
+public class MemoryMemberRepository implements MemberRepository {
+
     private static Map<Long, Member> memberMap = new HashMap<>();
 
     @Override

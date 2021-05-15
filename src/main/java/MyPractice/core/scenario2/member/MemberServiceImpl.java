@@ -1,6 +1,6 @@
-package MyPractice.core.scenario1.member;
+package MyPractice.core.scenario2.member;
 
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
