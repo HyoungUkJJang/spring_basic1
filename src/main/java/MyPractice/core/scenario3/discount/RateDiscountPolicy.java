@@ -1,7 +1,7 @@
-package MyPractice.core.scenario2.discount;
+package MyPractice.core.scenario3.discount;
 
-import MyPractice.core.scenario2.member.Grade;
-import MyPractice.core.scenario2.member.Member;
+import MyPractice.core.scenario3.member.Grade;
+import MyPractice.core.scenario3.member.Member;
 
 public class RateDiscountPolicy implements DiscountPolicy {
 

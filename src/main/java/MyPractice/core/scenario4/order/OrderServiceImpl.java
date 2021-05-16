@@ -1,11 +1,11 @@
-package MyPractice.core.scenario2.order;
-import MyPractice.core.scenario2.discount.FixDiscountPolicy;
-import MyPractice.core.scenario2.member.Member;
-import MyPractice.core.scenario2.member.MemoryMemberRepository;
-import MyPractice.core.scenario2.discount.DiscountPolicy;
-import MyPractice.core.scenario2.discount.RateDiscountPolicy;
-import MyPractice.core.scenario2.member.MemberRepository;
+package MyPractice.core.scenario4.order;
+import MyPractice.core.scenario4.discount.DiscountPolicy;
+import MyPractice.core.scenario4.member.Member;
+import MyPractice.core.scenario4.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     // 방법1 private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
@@ -24,6 +24,7 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;

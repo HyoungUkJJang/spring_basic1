@@ -1,4 +1,4 @@
-package MyPractice.core.scenario2.member;
+package MyPractice.core.scenario3.member;
 
 public class MemberServiceImpl implements MemberService {
 

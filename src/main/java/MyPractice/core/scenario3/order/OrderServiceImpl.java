@@ -1,10 +1,7 @@
-package MyPractice.core.scenario2.order;
-import MyPractice.core.scenario2.discount.FixDiscountPolicy;
-import MyPractice.core.scenario2.member.Member;
-import MyPractice.core.scenario2.member.MemoryMemberRepository;
-import MyPractice.core.scenario2.discount.DiscountPolicy;
-import MyPractice.core.scenario2.discount.RateDiscountPolicy;
-import MyPractice.core.scenario2.member.MemberRepository;
+package MyPractice.core.scenario3.order;
+import MyPractice.core.scenario3.discount.DiscountPolicy;
+import MyPractice.core.scenario3.member.Member;
+import MyPractice.core.scenario3.member.MemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
